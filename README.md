@@ -82,3 +82,19 @@ Request a password reset link sent via email.
 ### **Logos and Images**
 - Replace images in the `assets/` folder.
 
+## **Contributing**
+
+Contributions are welcome. To contribute:
+
+1. Fork this repository.
+2. Create a branch for your feature:
+   ```bash
+   git checkout -b new-feature
+   ```
+
+## **Author**
+
+- **Chéry Hantz Michael**  
+- GitHub: [MHC32](https://github.com/MHC32)  
+- Email: hantzmichaelchery6@gmail.com
+ 
