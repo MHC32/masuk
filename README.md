@@ -73,3 +73,12 @@ Enter email and password to access the app.
 ### **Forgot Password**
 Request a password reset link sent via email.
 
+## **Customization**
+
+### **Colors and Theme**
+- Styles are managed with **Tamagui**.
+- Default colors can be found in the `tamagi.config.ts` file.
+
+### **Logos and Images**
+- Replace images in the `assets/` folder.
+
