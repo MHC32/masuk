@@ -33,14 +33,8 @@ Make sure you have the following tools installed on your system:
 1. Clone this repository:
    ```bash
    git clone https://github.com/MHC32/masuk.git
-
+    cd masuk
+    yarn install
     ```
 
-    ```bash
-        cd masuk
-    ```
-
-     ```bash
-        npm install
-    ```
 
