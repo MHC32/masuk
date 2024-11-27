@@ -96,5 +96,6 @@ Contributions are welcome. To contribute:
 
 - **Chéry Hantz Michael**  
 - GitHub: [MHC32](https://github.com/MHC32)  
-- Email: hantzmichaelchery6@gmail.com
+- **Email**: [hantzmichaelchery6@gmail.com](mailto:hantzmichaelchery6@gmail.com)
+- **LinkedIn**: [Hantz Michael Chéry](https://www.linkedin.com/in/hantz-michael-chery-157762164)
  
