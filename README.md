@@ -32,4 +32,15 @@ Make sure you have the following tools installed on your system:
 ### **Installation Steps**
 1. Clone this repository:
    ```bash
-   git clone https://github.com/MHC32/app-expo-tamagui-login.git
+   git clone https://github.com/MHC32/masuk.git
+
+    ```
+
+    ```bash
+        cd masuk
+    ```
+
+     ```bash
+        npm install
+    ```
+
