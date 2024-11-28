@@ -1,12 +1,12 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const LoginScreen = ({navigation}) => {
+const RegisterScreen = ({navigation}) => {
   return (
     <View>
-      <Text>LoginScreen</Text>
+      <Text>RegisterScreen</Text>
     </View>
   )
 }
 
-export default LoginScreen
+export default RegisterScreen
