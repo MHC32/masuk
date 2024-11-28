@@ -63,6 +63,8 @@ export const tokens = createTokens({
       tertiary: '#FFFFFF',
       quaternary: '#000000',
       quinary: '#736A6A',
+      Senary: '#4285F4'
+
     },
   })
   
