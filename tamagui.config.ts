@@ -2,7 +2,7 @@ import {createTamagui, createTokens, createFont} from 'tamagui'
 
 
 const size = {
-  small: 16,
+  small: 12,
   medium: 19,
   large: 22,
   true: 16,
