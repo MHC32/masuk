@@ -19,7 +19,7 @@ const ForgotPasswordScreen = ({navigation}) => {
   return (
     <SafeAreaView>
       <StatusBar backgroundColor="#FFFFFF" barStyle="dark-content"/>
-      <YStack w="$responsiveContainerWidth" h="$responsiveContainerHeight" bg="red">
+      <YStack w="$responsiveContainerWidth" h="$responsiveContainerHeight" bg={tokens.color.tertiary}>
         <XStack>
 
         </XStack>

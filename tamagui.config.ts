@@ -6,8 +6,9 @@ const size = {
   medium: 19,
   large: 22,
   true: 16,
-  responsiveContainerWidth: wp('80%'), // 80% de largeur
-  responsiveContainerHeight: hp('10%'), 
+  responsiveContainerWidth: wp('100%'), 
+  responsiveContainerHeight: hp('100%'),
+ 
 }
 
 
