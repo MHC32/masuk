@@ -56,7 +56,7 @@ const LoginScreen = ({ navigation }) => {
             borderRadius={12}
           />
         </YStack>
-        <YStack w="279" h="80" marginTop="9%" jc="space-around">
+        <YStack w="279" h="80" marginTop="7%" jc="space-around">
           <Text style={{ fontSize: 14, fontFamily: "Poppins-Regular" }}>
             Masukan Password
           </Text>
@@ -98,7 +98,7 @@ const LoginScreen = ({ navigation }) => {
               elevation: 8,
             }}
           >
-            {/* <Text>Masuk</Text> */}
+            <Text style={{fontFamily:'Poppins-Semibold', fontSize:24, color:'white'}}>Masuk</Text>
           </TouchableOpacity>
         </YStack>
       </YStack>
