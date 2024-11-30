@@ -82,6 +82,7 @@ const LoginScreen = ({ navigation }) => {
             Lupa Password?
           </Text>
         </XStack>
+        <Text style={{alignSelf:'flex-start', marginLeft:'14%', color:'#4285F4'}}> Daftar</Text>
         <YStack w="279" h="25%" justifyContent="center" ai="center">
           <TouchableOpacity
             style={{
