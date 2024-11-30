@@ -1,11 +1,13 @@
 import {createTamagui, createTokens, createFont} from 'tamagui'
-
+const { widthPercentageToDP: wp, heightPercentageToDP: hp } = require('react-native-responsive-screen');
 
 const size = {
   small: 12,
   medium: 19,
   large: 22,
   true: 16,
+  responsiveContainerWidth: wp('80%'), // 80% de largeur
+  responsiveContainerHeight: hp('10%'), 
 }
 
 

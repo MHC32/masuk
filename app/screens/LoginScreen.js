@@ -32,7 +32,7 @@ const LoginScreen = ({ navigation }) => {
       >
         <Image
           source={require("../../assets/Logo.png")}
-          style={{ width: 249, height: 96, marginTop: "15%" }}
+          style={{ width: 249, height: 96, marginTop: "12%" }}
         />
         <Text
           style={{
@@ -72,6 +72,7 @@ const LoginScreen = ({ navigation }) => {
           <Text style={{ fontFamily: "Poppins-Regular", fontSize: 13 }}>
             Belum punya akun?
           </Text>
+          <TouchableOpacity onPress={()=> navigation.navigate('Reset password')}>
           <Text
             style={{
               fontFamily: "Poppins-Regular",
@@ -81,9 +82,12 @@ const LoginScreen = ({ navigation }) => {
           >
             Lupa Password?
           </Text>
+          </TouchableOpacity>
         </XStack>
-        <Text style={{alignSelf:'flex-start', marginLeft:'14%', color:'#4285F4'}}> Daftar</Text>
-        <YStack w="279" h="25%" justifyContent="center" ai="center">
+        <TouchableOpacity  style={{alignSelf:'flex-start', marginLeft:'14%', color:'#4285F4'}} onPress={()=> navigation.navigate('Register')}>
+          <Text style={{fontFamily:'Poppins-Regular', fontSize:13, color:'#4285F4'}}> Daftar</Text>
+        </TouchableOpacity>
+        <YStack w="279" h="30%" justifyContent="center" ai="center" >
           <TouchableOpacity
             style={{
               height: 55,
