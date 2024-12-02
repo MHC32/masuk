@@ -1,6 +1,9 @@
+import {Dimensions} from 'react-native'
 import { createTamagui, createTokens, createFont } from 'tamagui'
 const { widthPercentageToDP: wp, heightPercentageToDP: hp } = require('react-native-responsive-screen');
 
+
+const { height, width } = Dimensions.get('window');
 const size = {
   small: 12,
   medium: 19,
@@ -8,7 +11,9 @@ const size = {
   true: 16,
   responsiveContainerWidth: wp('100%'),
   responsiveContainerHeight: hp('100%'),
-
+  marginLogo: hp((26 / height) * 100),
+  marginText: hp((54/height)*100),
+  heightContainerLogo: hp((296/width)*100)
 }
 
 
