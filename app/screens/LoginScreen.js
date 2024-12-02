@@ -72,7 +72,28 @@ const LoginScreen = ({ navigation }) => {
           <Text style={{ fontFamily: "Poppins-Regular", fontSize: 13 }}>
             Belum punya akun?
           </Text>
-          <TouchableOpacity onPress={()=> navigation.navigate('Reset password')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Reset password")}
+          >
+            <Text
+              style={{
+                fontFamily: "Poppins-Regular",
+                fontSize: 13,
+                color: "#4285F4",
+              }}
+            >
+              Lupa Password?
+            </Text>
+          </TouchableOpacity>
+        </XStack>
+        <TouchableOpacity
+          style={{
+            alignSelf: "flex-start",
+            marginLeft: "14%",
+            color: "#4285F4",
+          }}
+          onPress={() => navigation.navigate("Register")}
+        >
           <Text
             style={{
               fontFamily: "Poppins-Regular",
@@ -80,14 +101,11 @@ const LoginScreen = ({ navigation }) => {
               color: "#4285F4",
             }}
           >
-            Lupa Password?
+            {" "}
+            Daftar
           </Text>
-          </TouchableOpacity>
-        </XStack>
-        <TouchableOpacity  style={{alignSelf:'flex-start', marginLeft:'14%', color:'#4285F4'}} onPress={()=> navigation.navigate('Register')}>
-          <Text style={{fontFamily:'Poppins-Regular', fontSize:13, color:'#4285F4'}}> Daftar</Text>
         </TouchableOpacity>
-        <YStack w="279" h="30%" justifyContent="center" ai="center" >
+        <YStack w="279" h="30%" justifyContent="center" ai="center">
           <TouchableOpacity
             style={{
               height: 55,
@@ -95,7 +113,7 @@ const LoginScreen = ({ navigation }) => {
               backgroundColor: "#4285F4",
               borderRadius: 12,
               justifyContent: "center",
-              alignItems:'center',
+              alignItems: "center",
               shadowColor: "#000",
               shadowOffset: { width: 4, height: 4 },
               shadowOpacity: 0.16,
@@ -103,7 +121,15 @@ const LoginScreen = ({ navigation }) => {
               elevation: 8,
             }}
           >
-            <Text style={{fontFamily:'Poppins-Semibold', fontSize:24, color:'white'}}>Masuk</Text>
+            <Text
+              style={{
+                fontFamily: "Poppins-Semibold",
+                fontSize: 24,
+                color: "white",
+              }}
+            >
+              Masuk
+            </Text>
           </TouchableOpacity>
         </YStack>
       </YStack>
