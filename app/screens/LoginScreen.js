@@ -80,7 +80,7 @@ const LoginScreen = ({ navigation }) => {
           w={`${widthContainerForms}%`}
           h={`${heightContainerForms}%`}
           marginTop={`${marginText}%`}
-          jc='space-around'
+          jc="space-around"
         >
           <Text style={{ fontSize: 14, fontFamily: "Poppins-Regular" }}>
             Masukan Email
@@ -98,7 +98,7 @@ const LoginScreen = ({ navigation }) => {
           w={`${widthContainerForms}%`}
           h={`${heightContainerForms}%`}
           marginTop={`${heightContainerForms}%`}
-          jc='space-around'
+          jc="space-around"
         >
           <Text style={{ fontSize: 14, fontFamily: "Poppins-Regular" }}>
             Masukan Password
@@ -111,6 +111,44 @@ const LoginScreen = ({ navigation }) => {
             borderRadius={12}
           />
         </YStack>
+
+        <XStack w="300" jc="space-around" marginTop="10">
+          <Text style={{ fontFamily: "Poppins-Regular", fontSize: 13 }}>
+            Belum punya akun?
+          </Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Reset password")}
+          >
+            <Text
+              style={{
+                fontFamily: "Poppins-Regular",
+                fontSize: 13,
+                color: "#4285F4",
+              }}
+            >
+              Lupa Password?
+            </Text>
+          </TouchableOpacity>
+        </XStack>
+        <TouchableOpacity
+          style={{
+            alignSelf: "flex-start",
+            marginLeft: "14%",
+            color: "#4285F4",
+          }}
+          onPress={() => navigation.navigate("Register")}
+        >
+          <Text
+            style={{
+              fontFamily: "Poppins-Regular",
+              fontSize: 13,
+              color: "#4285F4",
+            }}
+          >
+            {" "}
+            Daftar
+          </Text>
+        </TouchableOpacity>
       </YStack>
     </SafeAreaView>
   );
