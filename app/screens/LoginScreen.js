@@ -18,13 +18,15 @@ const {
 
 const LoginScreen = ({ navigation }) => {
   const { height, width } = Dimensions.get("window");
-  const marginLogo = (26 / height) * 100;
-  const marginText = (54 / height) * 100;
-  const marginLeft = (88 / width) * 100;
+  const marginLogo = (52 / height) * 100;
+  const marginText = (108 / height) * 100;
+  const marginLeft = (120 / width) * 100;
   const widthContainerLogo = (296 / width) * 100;
   const heightContainerLogo = (96 / height) * 100;
   const widthContainerText = (208 / width) * 100;
   const heightContainerText = (54 / height) * 100;
+  const widthContainerForms = (279 / width) * 100;
+  const heightContainerForms = (68 / height) * 100;
   const [fontsLoaded] = useFonts({
     "Poppins-Semibold": require("../../assets/fonts/Poppins-SemiBold.ttf"),
     "Poppins-Regular": require("../../assets/fonts/Poppins-Regular.ttf"),
@@ -73,6 +75,42 @@ const LoginScreen = ({ navigation }) => {
             Masuk
           </Text>
         </XStack>
+
+        <YStack
+          w={`${widthContainerForms}%`}
+          h={`${heightContainerForms}%`}
+          marginTop={`${marginText}%`}
+          jc='space-around'
+        >
+          <Text style={{ fontSize: 14, fontFamily: "Poppins-Regular" }}>
+            Masukan Email
+          </Text>
+          <Input
+            size="68"
+            h="43"
+            placeholder="Email"
+            borderColor={tokens.color.Senary}
+            borderRadius={12}
+          />
+        </YStack>
+
+        <YStack
+          w={`${widthContainerForms}%`}
+          h={`${heightContainerForms}%`}
+          marginTop={`${heightContainerForms}%`}
+          jc='space-around'
+        >
+          <Text style={{ fontSize: 14, fontFamily: "Poppins-Regular" }}>
+            Masukan Password
+          </Text>
+          <Input
+            size="68"
+            h="43"
+            placeholder="Password"
+            borderColor={tokens.color.Senary}
+            borderRadius={12}
+          />
+        </YStack>
       </YStack>
     </SafeAreaView>
   );
