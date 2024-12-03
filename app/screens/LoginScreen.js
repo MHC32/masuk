@@ -11,15 +11,20 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useEffect } from "react";
 import { tokens } from "../../tamagui.config";
 import { useFonts } from "expo-font";
-const { widthPercentageToDP: wp, heightPercentageToDP: hp } = require('react-native-responsive-screen');
+const {
+  widthPercentageToDP: wp,
+  heightPercentageToDP: hp,
+} = require("react-native-responsive-screen");
 
 const LoginScreen = ({ navigation }) => {
-   const { height, width  } = Dimensions.get("window");
-   const marginLogo = (26 / height) * 100;
-   const marginText = (54 / height) * 100; 
-   const marginLeft = (88 / width) * 100;
-   const widthContainerLogo = (296 / width) * 100;
-   const heightContainerLogo = (96 / height) * 100;
+  const { height, width } = Dimensions.get("window");
+  const marginLogo = (26 / height) * 100;
+  const marginText = (54 / height) * 100;
+  const marginLeft = (88 / width) * 100;
+  const widthContainerLogo = (296 / width) * 100;
+  const heightContainerLogo = (96 / height) * 100;
+  const widthContainerText = (208 / width) * 100;
+  const heightContainerText = (54 / height) * 100;
   const [fontsLoaded] = useFonts({
     "Poppins-Semibold": require("../../assets/fonts/Poppins-SemiBold.ttf"),
     "Poppins-Regular": require("../../assets/fonts/Poppins-Regular.ttf"),
@@ -38,23 +43,36 @@ const LoginScreen = ({ navigation }) => {
         bg={tokens.color.tertiary}
         ai="center"
       >
-        <XStack w={`${widthContainerLogo}%`}  h={`${heightContainerLogo}%`} marginLeft={`${marginLeft}`}  marginTop={`${marginLogo}%`} jc='center' ai='center'>
+        <XStack
+          w={`${widthContainerLogo}%`}
+          h={`${heightContainerLogo}%`}
+          marginLeft={`${marginLeft}`}
+          marginTop={`${marginLogo}%`}
+          jc="center"
+          ai="center"
+        >
           <Image
             source={require("../../assets/Logo.png")}
-            style={{ width: 249, height: 96, }}
+            style={{ width: 249, height: 96 }}
           />
         </XStack>
 
-        <Text
-          style={{
-            fontFamily: "Poppins-Semibold",
-            fontSize: 38,
-            letterSpacing: 2,
-            marginTop:`${marginText}%`,
-          }}
+        <XStack
+          w={`${widthContainerText}%`}
+          h={`${heightContainerText}%`}
+          marginTop={`${marginText}%`}
+          jc="center"
         >
-          Masuk
-        </Text>
+          <Text
+            style={{
+              fontFamily: "Poppins-Semibold",
+              fontSize: 38,
+              letterSpacing: 2,
+            }}
+          >
+            Masuk
+          </Text>
+        </XStack>
       </YStack>
     </SafeAreaView>
   );
