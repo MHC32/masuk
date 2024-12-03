@@ -17,7 +17,9 @@ const LoginScreen = ({ navigation }) => {
    const { height, width  } = Dimensions.get("window");
    const marginLogo = (26 / height) * 100;
    const marginText = (54 / height) * 100; 
-   heightContainerLogo: (296 / width) *100
+   const marginLeft = (88 / width) * 100;
+   const widthContainerLogo = (296 / width) * 100;
+   const heightContainerLogo = (96 / height) * 100;
   const [fontsLoaded] = useFonts({
     "Poppins-Semibold": require("../../assets/fonts/Poppins-SemiBold.ttf"),
     "Poppins-Regular": require("../../assets/fonts/Poppins-Regular.ttf"),
@@ -36,8 +38,11 @@ const LoginScreen = ({ navigation }) => {
         bg={tokens.color.tertiary}
         ai="center"
       >
-        <XStack w={`${heightContainerLogo}%`} >
-
+        <XStack w={`${widthContainerLogo}%`}  h={`${heightContainerLogo}%`} marginLeft={`${marginLeft}`}  marginTop={`${marginLogo}%`} jc='center' ai='center'>
+          <Image
+            source={require("../../assets/Logo.png")}
+            style={{ width: 249, height: 96, }}
+          />
         </XStack>
 
         <Text
