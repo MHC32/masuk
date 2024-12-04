@@ -3,37 +3,55 @@ import {
   Text,
   Dimensions,
   TouchableOpacity,
+  Image,
   StatusBar,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { XStack, YStack } from "tamagui";
 import React, { useEffect } from "react";
-import { tokens } from "../../tamagui.config";
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
+import { useFonts } from "expo-font";
 
 const ForgotPasswordScreen = ({ navigation }) => {
-  useEffect(() => {
-    // Obtenir les dimensions de l'écran
-    const { width, height } = Dimensions.get("window");
+  const { height, width } = Dimensions.get("window");
+  const marginLogo = (52 / height) * 100;
+  const marginText = (108 / height) * 100;
+  const marginLeft = (120 / width) * 100;
+  const widthContainerLogo = (296 / width) * 100;
+  const heightContainerLogo = (96 / height) * 100;
+  const widthContainerText = (208 / width) * 100;
+  const heightContainerText = (54 / height) * 100;
+  const widthContainerForms = (279 / width) * 100;
+  const heightContainerForms = (68 / height) * 100;
 
-    // Logger les dimensions dans la console
-    console.log(`Largeur de l'écran: ${width}px`);
-    console.log(`Hauteur de l'écran: ${height}px`);
-    const containerWidth = wp("100%"); // Par exemple, 80% de largeur
-    const containerHeight = hp("100%"); // Par exemple, 10% de hauteur
-  }, []);
+  const [fontsLoaded] = useFonts({
+    "Poppins-Semibold": require("../../assets/fonts/Poppins-SemiBold.ttf"),
+    "Poppins-Regular": require("../../assets/fonts/Poppins-Regular.ttf"),
+  });
+  if (!fontsLoaded) {
+    return <ActivityIndicator />;
+  }
+
   return (
     <SafeAreaView>
       <StatusBar backgroundColor="#FFFFFF" barStyle="dark-content" />
       <YStack
         w="$responsiveContainerWidth"
         h="$responsiveContainerHeight"
-        bg={tokens.color.tertiary}
+        bg="$tertiary"
       >
-        <XStack></XStack>
+        <XStack
+          w={`${widthContainerLogo}%`}
+          h={`${heightContainerLogo}%`}
+          marginLeft={`${marginLeft}`}
+          marginTop={`${marginLogo}%`}
+          jc="center"
+          ai="center"
+        >
+          <Image
+            source={require("../../assets/Logo.png")}
+            style={{ width: 249, height: 96 }}
+          />
+        </XStack>
       </YStack>
     </SafeAreaView>
   );

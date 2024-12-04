@@ -42,7 +42,7 @@ const LoginScreen = ({ navigation }) => {
         gap="5%%"
         w="$responsiveContainerWidth"
         h="$responsiveContainerHeight"
-        bg={tokens.color.tertiary}
+        bg='$tertiary'
         ai="center"
       >
         <XStack
