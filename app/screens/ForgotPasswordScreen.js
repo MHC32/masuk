@@ -1,28 +1,32 @@
+import { YStack, Input, XStack, Button } from "tamagui";
 import {
-  View,
-  Text,
-  Dimensions,
-  TouchableOpacity,
   Image,
   StatusBar,
+  Text,
+  ActivityIndicator,
+  Dimensions,
+  TouchableOpacity,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { XStack, YStack } from "tamagui";
 import React, { useEffect } from "react";
+import { tokens } from "../../tamagui.config";
 import { useFonts } from "expo-font";
+const {
+  widthPercentageToDP: wp,
+  heightPercentageToDP: hp,
+} = require("react-native-responsive-screen");
 
 const ForgotPasswordScreen = ({ navigation }) => {
   const { height, width } = Dimensions.get("window");
   const marginLogo = (52 / height) * 100;
   const marginText = (108 / height) * 100;
-  const marginLeft = (60 / width) * 100;
+  const marginLeft = (120 / width) * 100;
   const widthContainerLogo = (296 / width) * 100;
   const heightContainerLogo = (96 / height) * 100;
-  const widthContainerText = (208 / width) * 100;
-  const heightContainerText = (54 / height) * 100;
+  const widthContainerText = (416 / width) * 100;
+  const heightContainerText = (108 / height) * 100;
   const widthContainerForms = (279 / width) * 100;
   const heightContainerForms = (68 / height) * 100;
-
   const [fontsLoaded] = useFonts({
     "Poppins-Semibold": require("../../assets/fonts/Poppins-SemiBold.ttf"),
     "Poppins-Regular": require("../../assets/fonts/Poppins-Regular.ttf"),
@@ -32,17 +36,19 @@ const ForgotPasswordScreen = ({ navigation }) => {
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <StatusBar backgroundColor="#FFFFFF" barStyle="dark-content" />
       <YStack
+        gap="5%%"
         w="$responsiveContainerWidth"
         h="$responsiveContainerHeight"
-        bg="$tertiary"
+        bg='$tertiary'
+        ai="center"
       >
         <XStack
           w={`${widthContainerLogo}%`}
           h={`${heightContainerLogo}%`}
-          marginLeft={`${marginLeft}%`}
+          marginLeft={`${marginLeft}`}
           marginTop={`${marginLogo}%`}
           jc="center"
           ai="center"
@@ -52,6 +58,53 @@ const ForgotPasswordScreen = ({ navigation }) => {
             style={{ width: 249, height: 96 }}
           />
         </XStack>
+
+        <XStack
+          w={`${widthContainerText}%`}
+          h={`${heightContainerText}%`}
+          marginTop={`${marginText}%`}
+          jc="center"
+        >
+          <Text
+            style={{
+              fontFamily: "Poppins-Semibold",
+              fontSize: 38,
+              letterSpacing: 2,
+            }}
+          >
+            Luppa Password
+          </Text>
+        </XStack>
+
+        
+       
+        <YStack w={`${widthContainerForms}%`} h="30%" justifyContent="center" ai="center">
+          <TouchableOpacity
+            style={{
+              height: 55,
+              width: 218,
+              backgroundColor: "#4285F4",
+              borderRadius: 12,
+              justifyContent: "center",
+              alignItems: "center",
+              shadowColor: "#000",
+              shadowOffset: { width: 4, height: 4 },
+              shadowOpacity: 0.16,
+              shadowRadius: 8,
+              elevation: 8,
+            }}
+          >
+            <Text
+              style={{
+                fontFamily: "Poppins-Semibold",
+                fontSize: 24,
+                color: "white",
+              }}
+            >
+              Masuk
+            </Text>
+          </TouchableOpacity>
+        </YStack>
       </YStack>
     </SafeAreaView>
   );
