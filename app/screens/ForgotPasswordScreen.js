@@ -76,35 +76,6 @@ const ForgotPasswordScreen = ({ navigation }) => {
           </Text>
         </XStack>
 
-        
-       
-        <YStack w={`${widthContainerForms}%`} h="30%" justifyContent="center" ai="center">
-          <TouchableOpacity
-            style={{
-              height: 55,
-              width: 218,
-              backgroundColor: "#4285F4",
-              borderRadius: 12,
-              justifyContent: "center",
-              alignItems: "center",
-              shadowColor: "#000",
-              shadowOffset: { width: 4, height: 4 },
-              shadowOpacity: 0.16,
-              shadowRadius: 8,
-              elevation: 8,
-            }}
-          >
-            <Text
-              style={{
-                fontFamily: "Poppins-Semibold",
-                fontSize: 24,
-                color: "white",
-              }}
-            >
-              Masuk
-            </Text>
-          </TouchableOpacity>
-        </YStack>
       </YStack>
     </SafeAreaView>
   );
