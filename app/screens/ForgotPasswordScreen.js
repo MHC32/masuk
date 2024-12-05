@@ -42,7 +42,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
         gap="5%%"
         w="$responsiveContainerWidth"
         h="$responsiveContainerHeight"
-        bg='$tertiary'
+        bg="$tertiary"
         ai="center"
       >
         <XStack
@@ -68,14 +68,13 @@ const ForgotPasswordScreen = ({ navigation }) => {
           <Text
             style={{
               fontFamily: "Poppins-Semibold",
-              fontSize: 38,
+              fontSize: 32,
               letterSpacing: 2,
             }}
           >
             Luppa Password
           </Text>
         </XStack>
-
       </YStack>
     </SafeAreaView>
   );
