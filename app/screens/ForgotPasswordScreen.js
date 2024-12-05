@@ -15,7 +15,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
   const { height, width } = Dimensions.get("window");
   const marginLogo = (52 / height) * 100;
   const marginText = (108 / height) * 100;
-  const marginLeft = (120 / width) * 100;
+  const marginLeft = (60 / width) * 100;
   const widthContainerLogo = (296 / width) * 100;
   const heightContainerLogo = (96 / height) * 100;
   const widthContainerText = (208 / width) * 100;
@@ -42,7 +42,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
         <XStack
           w={`${widthContainerLogo}%`}
           h={`${heightContainerLogo}%`}
-          marginLeft={`${marginLeft}`}
+          marginLeft={`${marginLeft}%`}
           marginTop={`${marginLogo}%`}
           jc="center"
           ai="center"
